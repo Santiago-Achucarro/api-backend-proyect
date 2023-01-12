@@ -14,6 +14,8 @@ server.use(cors());
 
 server.use("/api/users", require("./users/userRt"));
 
+server.use("/api/post", require("./userPost/userPostRt"))
+
 server.listen(3000, (err) => {
   err
     ? console.log(err.code)
