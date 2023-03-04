@@ -5,12 +5,14 @@ const {
   updateUser,
   forgotPassword,
   resetPassword,
+  saveNewPass,
 } = require("./userOptionsCt");
 
 router.get("/", getAllUser);
 router.put("/:id", updateUser);
 router.delete("/:id", deleteUser);
-router.get("/forgot-password", forgotPassword);
-router.post("/reset/:token", resetPassword);
+router.get("/forgot", forgotPassword);
+router.get("/reset/:token", resetPassword);
+router.post("/reset/:token", saveNewPass);
 
 module.exports = router;

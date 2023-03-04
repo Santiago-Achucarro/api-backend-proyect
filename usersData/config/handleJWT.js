@@ -10,6 +10,7 @@ jwtFunctions.tokenSign = async (user, time) => {
 
 jwtFunctions.verifyToken = async (token) => {
   try {
+    // const verify = jwt.verify(token, jwt_secret);
     return jwt.verify(token, jwt_secret);
   } catch (err) {
     return err;
