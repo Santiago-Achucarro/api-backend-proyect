@@ -1,0 +1,26 @@
+.bg-wall {
+  background-color: #6f60cd !important;
+}
+
+.bg-form {
+  background-color: rgb(26, 32, 44) !important;
+  color: white !important;
+}
+
+input {
+  width: 170px;
+}
+
+input:active {
+  outline: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.2ms ease-in-out !important;
+}
