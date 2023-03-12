@@ -1,4 +1,4 @@
-.bg-wall {
+body {
   background-color: #6f60cd !important;
 }
 
@@ -23,4 +23,59 @@ button:hover {
   cursor: pointer;
   opacity: 0.5;
   transition: all 0.2ms ease-in-out !important;
+}
+
+/* Home Page */
+
+nav {
+  background-color: rgb(26, 32, 44) !important;
+  margin-bottom: 15px;
+}
+
+.canvas {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 80%;
+  height: auto;
+  background-color: rgb(26, 32, 44) !important;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: rgb(26, 32, 44) !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 60%;
+  border: 2px solid;
+  padding: 15px;
+}
+
+@media (max-width: 480px) {
+  span {
+    font-size: 13px;
+  }
+  .navItems {
+    display: none;
+  }
+  .canvas {
+    display: block;
+  }
+  .btn-mobile {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 0px;
+  }
 }

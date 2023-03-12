@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-center w-100 text-white">
+  <nav
+    class="w-75 d-flex align-items-center justify-content-around rounded-2 mt-2 px-4"
+  >
+    <h1>UsersApi</h1>
+
+    <div class="navItems">
+      <a href="#About" class="text-white">About</a>
+      <a href="#Docs" class="text-white">Docs</a>
+      <a href="#Contact" class="text-white">Contact</a>
+    </div>
+
+    <div class="canvas">
+
+      <input
+        class="btn-mobile"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#staticBackdrop"
+        aria-controls="staticBackdrop"
+        value="Menu"
+      />
+    </div>
+
+  </nav>
+</div>
+
+<div
+  class="offcanvas offcanvas-start"
+  data-bs-backdrop="static"
+  tabindex="-1"
+  id="staticBackdrop"
+  aria-labelledby="staticBackdropLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <a href="#About" class="text-black">About</a>
+      <a href="#Docs" class="text-black">Docs</a>
+      <a href="#Contact" class="text-black">Contact</a>
+    </div>
+  </div>
+</div>

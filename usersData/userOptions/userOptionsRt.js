@@ -1,4 +1,6 @@
 const router = require("express").Router();
+const { ValidatePassword } = require("../../validators/validateUsers");
+const { verifyToken } = require("../config/handleJWT");
 const {
   getAllUser,
   deleteUser,
@@ -11,8 +13,9 @@ const {
 router.get("/", getAllUser);
 router.put("/:id", updateUser);
 router.delete("/:id", deleteUser);
-router.get("/forgot", forgotPassword);
+
+router.post("/forgot", forgotPassword);
 router.get("/reset/:token", resetPassword);
-router.post("/reset/:token", saveNewPass);
+router.post("/reset/:token", ValidatePassword, saveNewPass);
 
 module.exports = router;

@@ -5,9 +5,10 @@ const controller = [];
 const url = process.env.url_dev;
 
 controller.addUser = async (req, res, next) => {
-  const { fullName, userName, email, password } = req.body;
+  const { password } = req.body;
   const hashingPassword = await hashPassword(password);
   let profilePic = "";
+  
   if (req.file) {
     profilePic = `${url}/public/storage/${req.file.filename}`;
   }
@@ -30,7 +31,7 @@ controller.addUser = async (req, res, next) => {
         }
       }
 
-      if (req.file.path) {
+      if (req.file) {
         const pathPic = obtenerSubcadena(req.file.path);
         fs.unlink(pathPic, (err) => {
           if (err) throw err;

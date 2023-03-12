@@ -1,0 +1,56 @@
+{{>navbar}}
+
+<main class="d-flex flex-column justify-content-center align-items-center text-white">
+    <section class="p-4 d-flex flex-column" >
+      <h1><strong>About</strong></h1>
+        <p id="About">The API provides the functionality to create, update, delete, and read users, as well as allowing them to create and delete posts. Additionally, each request is equipped with validators to ensure data integrity and prevent input errors. Users can also request password recovery in case of forgetting their password.
+
+Upon logging in, users are given a token that allows them to keep their session open for 24 hours, providing a seamless and uninterrupted user experience. This API is ideal for user management and social networking applications as it allows users to perform all necessary actions on a single platform. In summary, this API is a comprehensive solution for online user and post management.</p>
+    </section>
+
+    <section class="d-flex align-items-center flex-wrap p-3 "> 
+      <h1 class="ms-2 mt-2" id="Docs"><strong>Docs</strong></h1>
+        {{#each docs}}
+            <div class="d-flex flex-column w-100">
+                <div class="mt-2 ms-2">
+                   <div class="mb-2 gap-2">
+                     <span class="px-3 py-1 bg-success rounded-2 me-2">{{protocol}}</span>
+                    <span class="bg-secondary p-2 rounded-2 ">{{path}}</span>
+                   </div>
+                    <div class="w-100">
+                    <p class="fst-italic">{{info}}</p>
+                    </div>
+                </div>
+                <div class="mt-2 ms-2 mb-4 d-flex justify-content-center">
+                  <img src={{exemplary}} alt="image" class="rounded-2 w-50 " />
+                </div>
+            </div>
+        {{/each}}
+    </section>
+
+
+<footer>
+     <form
+        class="form-contact d-flex flex-column gap-5 mt-3  align-items-center justify-content-center"
+        action=""
+        method="post"
+        id="Contact"
+      >
+          <input
+            class="p-2 w-75 rounded-3 border-0 input-contact"
+            type="password"
+            placeholder="Enter your name"
+            autocomplete="new-password"
+            name="password"
+          />
+          <input
+            class="p-2 w-75 rounded-3 border-0 input-contact"
+            type="password"
+            placeholder="Enter a email"
+            name="confirmPassword"
+          />
+        <button class="border-0 rounded-2 p-2 w-25" type="submit">Enviar</button>
+      </form>
+</footer>
+
+</main>

@@ -1,0 +1,38 @@
+[
+  {
+    "protocol": "GET",
+    "path": "http://localhost:5000/api/users",
+    "info": "This endpoint will return you a list for all of the users have register",
+    "exemplary": "img/GET-api-users.png"
+  },
+  {
+    "protocol": "POST",
+    "path": "http://localhost:5000/api/users/register",
+    "info": "In this endpoint you have to send full name,username,email,password and profile picture if you wanted and below this message you se the response for success entry data and also in this endpoint control if the data is repeated the api return a error ",
+    "exemplary": "img/POST-api-users-register.png"
+  },
+  {
+    "protocol": "POST",
+    "path": "http://localhost:5000/api/users/login",
+    "info": "In this endpoint you have to send email and password for the user register if the user is registered the api return the message below",
+    "exemplary": "img/POST-api-users-login.png"
+  },
+  {
+    "protocol": "PUT",
+    "path": "http://localhost:5000/api/users/:id",
+    "info": "In this endpoint with the id for params you can update a data user",
+    "exemplary": "img/POST-api-users-update.png"
+  },
+  {
+    "protocol": "DELETE",
+    "path": "http://localhost:5000/api/users/:id",
+    "info": "In this endpoint with the id for params you can delete a data user",
+    "exemplary": "img/DELETE-api-users-delete.png"
+  },
+  {
+    "protocol": "GET",
+    "path": "http://localhost:5000/api/users/forgot",
+    "info": "In this endpoint you have to send a email has register in the api, if this user is register you will receive a link for reset the password",
+    "exemplary": "img/GET-api-users-forgot.png"
+  }
+]
